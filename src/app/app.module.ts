@@ -37,7 +37,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
         AppComponent,
         HomeComponent,
         LoginComponent,
-        TripDetailsComponent,
+        TripDetailsComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

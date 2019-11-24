@@ -7,19 +7,12 @@
         <th>Current Location</th>
     </tr>
     <tbody>
-        <!-- <tr *ngFor ="let vehicle of currentUser.vehiclesList;">
+        <tr *ngFor ="let vehicle of currentUser.vehiclesList;">
             <td>{{vehicle.ID}}</td>
             <td>{{vehicle.VEHICLE_NUMBER}}</td>
-            <td><a (onclick)="getMap('{{vehicle.PKP_LOC}}',{{vehicle.PKP_LAT}},{{vehicle.PKP_LON}})"  class="btn btn-link">{{vehicle.PKP_LOC}}</a></td>
-            <td><a (click)="getMap('{{vehicle.DROP_LOC}}',{{vehicle.DROP_LAT}},{{vehicle.DROP_LON}})" class="btn btn-link">{{vehicle.DROP_LOC}}</a></td>
-            <td><a (click)="getMap('{{vehicle.CURR_LOC}}',{{vehicle.CURR_LAT}},{{vehicle.CURR_LON}})" class="btn btn-link">{{vehicle.CURR_LOC}}</a></td>
-        </tr> -->
-        <tr>
-                <td>1</td>
-                <td>TN11AU2519</td>
-                <td><a (click)="getMap('Chennai',13.067439,80.237617)"  class="btn btn-link">Chennai</a></td>
-                <td><a (click)="getMap('Madurai',9.939093,78.121719)" class="btn btn-link">Madurai</a></td>
-                <td><a (click)="getMap('Chennai',13.067439,80.237617)" class="btn btn-link">Chennai</a></td>
+            <td><a [attr.id]="vehicle.PKP_LOC" [attr.location]="vehicle.PKP_LOC" [attr.latitude]="vehicle.PKP_LAT" [attr.longitude]="vehicle.PKP_LON" (click)="getRow($event)" class="btn btn-link">{{vehicle.PKP_LOC}}</a></td>
+            <td><a [attr.id]=vehicle.DROP_LOC [attr.location]="vehicle.DROP_LOC" [attr.latitude]="vehicle.DROP_LAT" [attr.longitude]="vehicle.DROP_LON" (click)="getRow($event)" class="btn btn-link">{{vehicle.DROP_LOC}}</a></td>
+            <td><a [attr.id]=vehicle.CURR_LOC [attr.location]="vehicle.CURR_LOC" [attr.latitude]="vehicle.CURR_LAT" [attr.longitude]="vehicle.CURR_LON" (click)="getRow($event)" class="btn btn-link">{{vehicle.CURR_LOC}}</a></td>
         </tr>
     </tbody>
    
