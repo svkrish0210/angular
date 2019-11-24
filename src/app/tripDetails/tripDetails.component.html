@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Vehicle Number</th>
+        <th>Pickup point</th>
+        <th>Drop point</th>
+        <th>Current Location</th>
+    </tr>
+    <tbody>
+        <!-- <tr *ngFor ="let vehicle of currentUser.vehiclesList;">
+            <td>{{vehicle.ID}}</td>
+            <td>{{vehicle.VEHICLE_NUMBER}}</td>
+            <td><a (onclick)="getMap('{{vehicle.PKP_LOC}}',{{vehicle.PKP_LAT}},{{vehicle.PKP_LON}})"  class="btn btn-link">{{vehicle.PKP_LOC}}</a></td>
+            <td><a (click)="getMap('{{vehicle.DROP_LOC}}',{{vehicle.DROP_LAT}},{{vehicle.DROP_LON}})" class="btn btn-link">{{vehicle.DROP_LOC}}</a></td>
+            <td><a (click)="getMap('{{vehicle.CURR_LOC}}',{{vehicle.CURR_LAT}},{{vehicle.CURR_LON}})" class="btn btn-link">{{vehicle.CURR_LOC}}</a></td>
+        </tr> -->
+        <tr>
+                <td>1</td>
+                <td>TN11AU2519</td>
+                <td><a (click)="getMap('Chennai',13.067439,80.237617)"  class="btn btn-link">Chennai</a></td>
+                <td><a (click)="getMap('Madurai',9.939093,78.121719)" class="btn btn-link">Madurai</a></td>
+                <td><a (click)="getMap('Chennai',13.067439,80.237617)" class="btn btn-link">Chennai</a></td>
+        </tr>
+    </tbody>
+   
+</table>
+
+
+<agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+  <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
