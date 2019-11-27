@@ -4,13 +4,14 @@
     "dependencies": {
         "@agm/core": "^1.0.0-beta.3",
         "@angular/animations": "^7.2.15",
-        "@angular/cdk": "^7.2.2",
+        "@angular/cdk": "^7.3.7",
+        "@angular/cli": "^8.3.19",
         "@angular/common": "^7.2.15",
         "@angular/compiler": "^7.2.15",
         "@angular/core": "^7.2.15",
         "@angular/flex-layout": "^7.0.0-beta.24",
         "@angular/forms": "^7.2.15",
-        "@angular/material": "^7.2.2",
+        "@angular/material": "^7.3.7",
         "@angular/platform-browser": "^7.2.15",
         "@angular/platform-browser-dynamic": "^7.2.15",
         "@angular/router": "^7.2.15",
@@ -21,8 +22,13 @@
     "devDependencies": {
         "@types/node": "^11.15.2",
         "angular2-template-loader": "^0.6.2",
+        "css-loader": "^3.2.0",
         "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.13.0",
         "raw-loader": "^1.0.0",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.0.0",
         "ts-loader": "^5.4.5",
         "typescript": "^3.7.2",
         "webpack": "^4.41.2",
@@ -30,6 +36,6 @@
         "webpack-dev-server": "^3.9.0"
     },
     "scripts": {
-        "start": "webpack-dev-server --mode development --open"
+        "start": "webpack-dev-server --port 3000 --hot --host localhost"
     }
 }

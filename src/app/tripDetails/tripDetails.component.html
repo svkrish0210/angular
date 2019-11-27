@@ -7,17 +7,15 @@
         <th>Current Location</th>
     </tr>
     <tbody>
-        <tr *ngFor ="let vehicle of currentUser.vehiclesList;">
-            <td>{{vehicle.ID}}</td>
-            <td>{{vehicle.VEHICLE_NUMBER}}</td>
-            <td><a [attr.id]="vehicle.PKP_LOC" [attr.location]="vehicle.PKP_LOC" [attr.latitude]="vehicle.PKP_LAT" [attr.longitude]="vehicle.PKP_LON" (click)="getRow($event)" class="btn btn-link">{{vehicle.PKP_LOC}}</a></td>
-            <td><a [attr.id]=vehicle.DROP_LOC [attr.location]="vehicle.DROP_LOC" [attr.latitude]="vehicle.DROP_LAT" [attr.longitude]="vehicle.DROP_LON" (click)="getRow($event)" class="btn btn-link">{{vehicle.DROP_LOC}}</a></td>
-            <td><a [attr.id]=vehicle.CURR_LOC [attr.location]="vehicle.CURR_LOC" [attr.latitude]="vehicle.CURR_LAT" [attr.longitude]="vehicle.CURR_LON" (click)="getRow($event)" class="btn btn-link">{{vehicle.CURR_LOC}}</a></td>
+         <tr *ngFor ="let vehicle of response.vehiclesList">
+            <td>{{vehicle.id}}</td>
+            <td>{{vehicle.vehicle_number}}</td>
+            <td><a [attr.id]="vehicle.pkp_loc" [attr.location]="vehicle.pkp_loc" [attr.latitude]="vehicle.pkp_lat" [attr.longitude]="vehicle.pkp_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.pkp_loc}}</a></td>
+            <td><a [attr.id]="vehicle.drop_loc" [attr.location]="vehicle.drop_loc" [attr.latitude]="vehicle.drop_lat" [attr.longitude]="vehicle.drop_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.drop_loc}}</a></td>
+            <td><a [attr.id]="vehicle.curr_loc" [attr.location]="vehicle.curr_loc" [attr.latitude]="vehicle.curr_lat" [attr.longitude]="vehicle.curr_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.curr_loc}}</a></td>
         </tr>
-    </tbody>
-   
+    </tbody> 
 </table>
-
 
 <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
   <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>

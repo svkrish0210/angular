@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/main.ts',
@@ -15,7 +16,7 @@ module.exports = {
             {
                 test: /\.(html|css)$/,
                 use: 'raw-loader'
-            }
+            },
         ]
     },
     plugins: [
