@@ -1,3 +1,22 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {background-color:#343a40!important; color: #e9ecef}
+  .location:hover {background-color:#343a40!important; color: #e9ecef}
+  </style>
+
+<!-- <div class="row clearfix"> -->
+        <div class="container" style="padding: 0.1rem 0.1rem;">
+               <div class="row clearfix" style="padding: 1rem 1rem;">
+                    <div class="col-sm-8 offset-sm-2"> 
 <table>
     <tr>
         <th>Id</th>
@@ -10,13 +29,21 @@
          <tr *ngFor ="let vehicle of response.vehiclesList">
             <td>{{vehicle.id}}</td>
             <td>{{vehicle.vehicle_number}}</td>
-            <td><a [attr.id]="vehicle.pkp_loc" [attr.location]="vehicle.pkp_loc" [attr.latitude]="vehicle.pkp_lat" [attr.longitude]="vehicle.pkp_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.pkp_loc}}</a></td>
-            <td><a [attr.id]="vehicle.drop_loc" [attr.location]="vehicle.drop_loc" [attr.latitude]="vehicle.drop_lat" [attr.longitude]="vehicle.drop_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.drop_loc}}</a></td>
-            <td><a [attr.id]="vehicle.curr_loc" [attr.location]="vehicle.curr_loc" [attr.latitude]="vehicle.curr_lat" [attr.longitude]="vehicle.curr_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.curr_loc}}</a></td>
+            <td class="location"><a [attr.id]="vehicle.pkp_loc" [attr.location]="vehicle.pkp_loc" [attr.latitude]="vehicle.pkp_lat" [attr.longitude]="vehicle.pkp_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.pkp_loc}}</a></td>
+            <td class="location"><a [attr.id]="vehicle.drop_loc" [attr.location]="vehicle.drop_loc" [attr.latitude]="vehicle.drop_lat" [attr.longitude]="vehicle.drop_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.drop_loc}}</a></td>
+            <td class="location"><a [attr.id]="vehicle.curr_loc" [attr.location]="vehicle.curr_loc" [attr.latitude]="vehicle.curr_lat" [attr.longitude]="vehicle.curr_lon" (click)="getRow($event)" class="btn btn-link">{{vehicle.curr_loc}}</a></td>
         </tr>
     </tbody> 
 </table>
-
+</div>
+</div>
+<br/>
+<div class="row clearfix">
+<div class="col-sm-8 offset-sm-2">
 <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
   <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
+</div>
+</div>
+</div>
+<!-- </div> -->
